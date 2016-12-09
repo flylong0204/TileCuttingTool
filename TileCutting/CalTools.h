@@ -44,31 +44,40 @@ private:
     qreal _bottom;
     qreal _left;
     qreal _right;
+    int _minLayer;
+    int _maxLayer;
 
 };
 
 /**
- * brief The X class
- * 作用
+ * brief The TileKey class
+ * 作用 一个TileKey(层级、横纵)确定一个瓦片
  */
-class A
-{
-
-};
-
-/**
- * brief The SavePicture class
- * 作用 转换图片格式、保存图片
- */
-class SavePicture
+class TileKey
 {
 public:
-    SavePicture();
-    void setFilePath( const QString &filePath );
-    //osg::Image getImage();
+    TileKey():_layer(0),_x(0),_y(0) {}
+    bool operator == (TileKey& key)
+    {
+        return this->getLayer() == key.getLayer() && this == key.x && y == key.y;
+    }
+    int getLayer()
+    {
+        return _layer;
+    }
+    int getX()
+    {
+        return _x;
+    }
+    int getY()
+    {
+        return _y;
+    }
 
 private:
-    QString _filePath;
+    int _layer;
+    int _x;
+    int _y;
 };
 
 

@@ -84,3 +84,8 @@ bool CalDataGDAL::getLayering(int *min, int *max)
     }
 
 }
+
+osg::Image CalDataGDAL::getImage()
+{
+
+}

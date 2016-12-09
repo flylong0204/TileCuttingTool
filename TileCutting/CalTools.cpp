@@ -89,22 +89,22 @@ qreal CalExtent::centery()
 
 int CalExtent::getTileLeftX()
 {
-
+    return 0;
 }
 
 int CalExtent::getTileRightX()
 {
-
+    return 0;
 }
 
 int CalExtent::getTileTopY()
 {
-
+    return 0;
 }
 
 int CalExtent::getTileBottomY()
 {
-
+    return 0;
 }
 
 

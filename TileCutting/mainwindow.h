@@ -23,6 +23,8 @@ private slots:
 
     void on_structure_clicked();
 
+    void on_close_clicked();
+
 private:
     Ui::MainWindow *ui;
     CalDataGDAL *_pDataGDAL;

@@ -3,6 +3,7 @@
 
 #include "CalTools.h"
 #include <gdal_priv.h>
+#include <osg/Image>
 
 #include <QString>
 
@@ -13,6 +14,7 @@ public:
     ~CalDataGDAL();
     CalExtent getExtent();
     bool getLayering ( int *min, int* max);
+    osg::Image getImage();
 private:
     GDALDataset *_poDataset;
     double _xResolution;

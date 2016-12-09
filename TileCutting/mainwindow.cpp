@@ -90,3 +90,8 @@ void MainWindow::on_structure_clicked()
 
     }
 }
+
+void MainWindow::on_close_clicked()
+{
+    this->close();
+}
