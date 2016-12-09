@@ -46,7 +46,7 @@ CONFIG(debug, debug|release){
         -losgQt \
 }
 
-LIBS += "E:/Project/TileCuttingTool/sdk/3rd/lib/gdal_i.lib"
+LIBS += "E:/learn/TileCuttingTool/sdk/3rd/lib/gdal_i.lib"
 
 DLLDESTDIR = $$PWD/../bin
 DESTDIR = $$PWD/../bin
