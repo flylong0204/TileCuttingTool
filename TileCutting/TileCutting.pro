@@ -6,21 +6,23 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    CalDataGDAL.cpp \
-    CalTools.cpp
+    TileCuttImage.cpp \
+    TileCuttDEM.cpp \
+    TileCuttInfo.cpp
 
 HEADERS  += mainwindow.h \
-    CalDataGDAL.h \
-    CalTools.h
+    TileCuttImage.h \
+    TileCuttDEM.h \
+    TileCuttInfo.h
 
 FORMS    += mainwindow.ui
 
-INCLUDEPATH += $$PWD/../sdk/osg/include
-INCLUDEPATH += $$PWD/../sdk/3rd/include
+INCLUDEPATH += $$PWD/../sdk/osg/x64/include
+INCLUDEPATH += $$PWD/../sdk/3rd/x64/include
 
 
-LIBS += -L"$$PWD/../sdk/osg/lib"
-LIBS += -L"$$PWD/../sdk/3rd/lib"
+LIBS += -L"$$PWD/../sdk/osg/x64/lib"
+LIBS += -L"$$PWD/../sdk/3rd/x64/lib"
 
 CONFIG(debug, debug|release){
     LIBS += -lOpenThreadsd \
@@ -32,7 +34,6 @@ CONFIG(debug, debug|release){
         -losgTextd \
         -losgWidgetd \
         -losgFXd \
-        -losgQtd
 }else{
     LIBS += -lOpenThreads \
         -losg \
@@ -43,10 +44,9 @@ CONFIG(debug, debug|release){
         -losgText \
         -losgWidget \
         -losgFX \
-        -losgQt \
 }
 
-LIBS += "E:/learn/TileCuttingTool/sdk/3rd/lib/gdal_i.lib"
+LIBS += "E:/workspace/GitProject/TileCuttingTool/sdk/3rd/x64/lib/gdal_i.lib"
 
 DLLDESTDIR = $$PWD/../bin
 DESTDIR = $$PWD/../bin

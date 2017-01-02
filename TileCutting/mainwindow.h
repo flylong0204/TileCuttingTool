@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "CalDataGDAL.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,8 +26,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    CalDataGDAL *_pDataGDAL;
-    CalExtent _pExtent;
 
 };
 

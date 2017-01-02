@@ -30,20 +30,6 @@ void MainWindow::on_OpenFile_clicked()
         else
         {
             ui->FilePathshow->setText( filename );
-            _pDataGDAL = new CalDataGDAL( filename );
-            _pExtent = _pDataGDAL->getExtent();
-            ui->Left->setText(QString::number(_pExtent.getLeft(),10,6));
-            ui->Top->setText(QString::number(_pExtent.getTop(),10,6));
-            ui->Right->setText(QString::number(_pExtent.getRight(),10,6));
-            ui->Bottom->setText(QString::number(_pExtent.getBottom(),10,6));
-            int minLevel;
-            int maxLevel;
-            if(_pDataGDAL->getLayering(&minLevel,&maxLevel))
-            {
-                ui->txtMinLevel->setText(QString::number(minLevel));
-                ui->txtMaxLevel->setText(QString::number(maxLevel));
-            }
-            delete _pDataGDAL;
         }
     }
     if( !ui->FileType1->isChecked() && ui->FileType2->isChecked() )
@@ -70,25 +56,7 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-    if(ui->SavePathShow->text().isEmpty() || ui->FilePathshow->text().isEmpty())
-        return;
-    if(ui->Left->text().isEmpty() || ui->Right->text().isEmpty() || ui->Top->text().isEmpty() || ui->Bottom->text().isEmpty())
-        return;
-    if(ui->Left->text().toDouble() > ui->Right->text().toDouble() || ui->Top->text().toDouble() < ui->Bottom->text().toDouble())
-        return;
-    if(ui->txtMinLevel->text().isEmpty()|| ui->txtMaxLevel->text().isEmpty())
-        return;
-    if(ui->txtMinLevel->text().toInt() >= ui->txtMaxLevel->text().toInt())
-        return;
 
-    CalExtent nowExtent(ui->Top->text().toDouble(),ui->Bottom->text().toDouble(),
-                        ui->Left->text().toDouble(),ui->Right->text().toDouble());
-    int lodMin = ui->txtMinLevel->text().toInt();
-    int lodMax = ui->txtMaxLevel->text().toInt();
-    for(int lod = lodMin; lod <= lodMax; lod++)
-    {
-
-    }
 }
 
 void MainWindow::on_close_clicked()
