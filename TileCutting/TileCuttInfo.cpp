@@ -53,7 +53,7 @@ int TileCuttInfo::compara(const TileCuttInfo &info)
     return 0;
 }
 
-bool TileCuttInfo::operator ==(const TileCuttInfo &info) const
+bool TileCuttInfo::operator==(TileCuttInfo info)
 {
     return (info.getLeft() == _left);
 }

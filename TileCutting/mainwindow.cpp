@@ -56,7 +56,7 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-    qDebug() << (TileCuttInfo(1,2,3,4) == TileCuttInfo(1,2,3,4));
+    qDebug() << (TileCuttInfo(2,2,3,4) == TileCuttInfo(1,2,3,4));
 }
 
 void MainWindow::on_close_clicked()

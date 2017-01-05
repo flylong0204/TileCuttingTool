@@ -19,8 +19,8 @@ public:
 
     int compara(const TileCuttInfo &info);
 
-    //重载运算符
-    bool operator == (const TileCuttInfo &info) const;
+    //重载运算符（判断范围关系）
+    bool operator==(TileCuttInfo info);
 
 private:
     float _left;
