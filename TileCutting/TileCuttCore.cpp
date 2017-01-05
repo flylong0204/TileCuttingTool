@@ -1,6 +1,6 @@
-#include "TileCuttImage.h"
+#include "TileCuttCore.h"
 
-TileCuttImage::TileCuttImage() :
+TileCuttCore::TileCuttCore() :
     _source(""),
     _left(0),
     _right(0),
@@ -13,7 +13,7 @@ TileCuttImage::TileCuttImage() :
     CPLSetConfigOption("GDAL_FILENAME_IS_UTF8","NO");//支持中文路径
 }
 
-TileCuttImage::~TileCuttImage()
+TileCuttCore::~TileCuttCore()
 {
 
 }

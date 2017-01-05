@@ -23,7 +23,7 @@ void MainWindow::on_OpenFile_clicked()
                            tr("选择图像"),
                            "",
                            tr("Images (*.tif *.TIF *.tiff *.TIFF)")); //选择路径
-        if( filename.toDouble() )
+        if( filename.toFloat() )
         {
             return;
         }
@@ -44,7 +44,7 @@ void MainWindow::on_SaveFile_clicked()
                    "选择保存路径",
                    "./",
                     QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
-    if( file_dir.toDouble() )
+    if( file_dir.toFloat() )
     {
         return;
     }
@@ -56,7 +56,7 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-
+    qDebug() << (TileCuttInfo(1,2,3,4) == TileCuttInfo(1,2,3,4));
 }
 
 void MainWindow::on_close_clicked()

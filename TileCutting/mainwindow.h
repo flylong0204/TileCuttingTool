@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
+
+#include "TileCuttInfo.h"
 
 namespace Ui {
 class MainWindow;

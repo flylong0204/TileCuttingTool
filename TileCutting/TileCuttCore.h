@@ -1,5 +1,5 @@
-#ifndef TILECUTTIMAGE_H
-#define TILECUTTIMAGE_H
+#ifndef TileCuttCore_H
+#define TileCuttCore_H
 
 #include <QString>
 
@@ -9,11 +9,11 @@
 #include <gdal_priv.h>
 #include <osg/Shape>
 
-class TileCuttImage
+class TileCuttCore
 {
 public:
-    TileCuttImage();
-    ~TileCuttImage();
+    TileCuttCore();
+    ~TileCuttCore();
 
     void setSource( const QString &source );
     void getRange();
@@ -25,10 +25,10 @@ public:
 private:
     GDALDataset *_dataset;
     QString _source;
-    double _left;
-    double _right;
-    double _top;
-    double _bottom;
+    float _left;
+    float _right;
+    float _top;
+    float _bottom;
     int _minHierarchy;
     int _maxHierarchy;
     osg::Image *_img;
@@ -36,4 +36,4 @@ private:
 
 };
 
-#endif // TILECUTTIMAGE_H
+#endif // TileCuttCore_H
