@@ -20,7 +20,7 @@
       <x>10</x>
       <y>20</y>
       <width>336</width>
-      <height>417</height>
+      <height>447</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -269,7 +269,7 @@
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLineEdit" name="lineEdit"/>
+                     <widget class="QLineEdit" name="band"/>
                     </item>
                    </layout>
                   </item>

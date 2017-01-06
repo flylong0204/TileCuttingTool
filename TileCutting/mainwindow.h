@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QDebug>
 
+#include "TileCuttCore.h"
 #include "TileCuttInfo.h"
 
 namespace Ui {
@@ -29,6 +30,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    TileCuttCore _tileCuttCore;
 
 };
 

@@ -12,27 +12,27 @@
 class TileCuttCore
 {
 public:
-    TileCuttCore(){}
+    TileCuttCore();
     ~TileCuttCore();
 
-//    void setSource( const QString &source );
-//    void getRange();
-//    void getHierarchy();
+    void setSource( const QString &filePath );
+    TileCuttInfo getInfo();
+    int getBand();
 
-//    void getImage( const TileCuttInfo &info );
-//    void saveImage( const TileCuttInfo &info );
+    void getImage( const TileCuttInfo &info );
+    void saveImage( const TileCuttInfo &info );
 
 private:
-//    GDALDataset *_dataset;
-//    QString _source;
-//    float _left;
-//    float _right;
-//    float _top;
-//    float _bottom;
-//    int _minHierarchy;
-//    int _maxHierarchy;
-//    osg::Image *_img;
-//    osg::HeightField *_dem;
+    GDALDataset *_dataset = NULL;
+    QString _source;
+    float _left;
+    float _right;
+    float _top;
+    float _bottom;
+    int _minHierarchy;
+    int _maxHierarchy;
+    osg::Image *_img;
+    osg::HeightField *_dem;
 
 };
 

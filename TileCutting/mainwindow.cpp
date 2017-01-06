@@ -16,25 +16,26 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_OpenFile_clicked()
 {
-    if( ui->FileType1->isChecked() && !ui->FileType2->isChecked() )
+    //影像和DEM一样
+    QString filename = QFileDialog::getOpenFileName(this,
+                       tr("选择图像"),
+                       "",
+                       tr("Images (*.tif *.TIF *.tiff *.TIFF)")); //选择路径
+    if( filename.isEmpty() )
     {
-        //影像
-        QString filename = QFileDialog::getOpenFileName(this,
-                           tr("选择图像"),
-                           "",
-                           tr("Images (*.tif *.TIF *.tiff *.TIFF)")); //选择路径
-        if( filename.toFloat() )
-        {
-            return;
-        }
-        else
-        {
-            ui->FilePathshow->setText( filename );
-        }
+        return;
     }
-    if( !ui->FileType1->isChecked() && ui->FileType2->isChecked() )
+    else
     {
-        //DEM
+        ui->FilePathshow->setText( filename );
+        _tileCuttCore.setSource(filename);
+        ui->Left->setText( QString::number( _tileCuttCore.getInfo().getLeft()) );
+        ui->Right->setText( QString::number( _tileCuttCore.getInfo().getRight()) );
+        ui->Top->setText( QString::number( _tileCuttCore.getInfo().getTop()) );
+        ui->Bottom->setText( QString::number( _tileCuttCore.getInfo().getBottom()) );
+        ui->txtMinLevel->setText( QString::number( _tileCuttCore.getInfo().getMinLayer()));
+        ui->txtMaxLevel->setText( QString::number( _tileCuttCore.getInfo().getMaxLayer()));
+        ui->band->setText( QString::number( _tileCuttCore.getBand()));
     }
 }
 
@@ -56,7 +57,7 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-    qDebug() << (TileCuttInfo(2,2,3,4) == TileCuttInfo(1,2,3,4));
+    qDebug() << (TileCuttInfo(1.111100001111,2,3,4,0,1) == TileCuttInfo(1.111100001111,2,3,4,0,1));
 }
 
 void MainWindow::on_close_clicked()

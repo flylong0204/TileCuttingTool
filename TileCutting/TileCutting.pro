@@ -44,7 +44,7 @@ CONFIG(debug, debug|release){
         -losgFX \
 }
 
-LIBS += "E:/workspace/GitProject/TileCuttingTool/sdk/3rd/x64/lib/gdal_i.lib"
+LIBS += "$$PWD/../sdk/3rd/x64/lib/gdal_i.lib"
 
 DLLDESTDIR = $$PWD/../bin
 DESTDIR = $$PWD/../bin
