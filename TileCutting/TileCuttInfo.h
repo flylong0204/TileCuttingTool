@@ -14,8 +14,14 @@ public:
     double getBottom();
     int getMinLayer();
     int getMaxLayer();
+    //范围宽和高
     double getWidth();
     double getHeight();
+    //像素宽和高
+    int getPixelWidth();
+    void setPixelWidth( const int &w );
+    int getPixelHeight();
+    void setPixelHeight(const int &h );
 
     //重载运算符（判断范围关系）
     bool operator==(TileCuttInfo info);
@@ -29,6 +35,8 @@ private:
     double _bottom;
     int _minLayer;
     int _maxLayer;
+    int _pixelWidth;
+    int _pixelHeight;
 
 };
 
@@ -36,8 +44,6 @@ class TileCuttKey
 {
 public:
     TileCuttKey( const TileCuttInfo &info );
-
-    void setTileSize( const int &width, const int &height);
 
 private:
     int _x;
@@ -47,8 +53,6 @@ private:
     int _yTop;
     int _yBottom;
     int _layer;
-    int _tileWidth;
-    int _tileHeight;
 };
 
 #endif // TILECUTTINFO_H
