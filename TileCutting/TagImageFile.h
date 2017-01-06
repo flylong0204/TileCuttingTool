@@ -47,6 +47,7 @@ public:
     {
         return _left > tif.getLeft() && _right > tif.getRight() && _top > tif.getTop() && _bottom > tif.getBottom();
     }
+    //osg::Image getImage();
 
 protected:
     GDALDataset *_dataset = NULL;
@@ -63,6 +64,39 @@ protected:
     int _pixelHeight;
 
     void getInfo();
+};
+
+class TagImageFileTile
+{
+public:
+    TagImageFileTile( const double &l, const double &r, const double &t, const double &b) : _pixelWidth(256), _pixelHeight(256)
+    {
+        _left = l;
+        _right = r;
+        _top = t;
+        _bottom = b;
+    }
+    double getPixelWidth()
+    {
+        return _pixelWidth;
+    }
+    double getPixelHeight()
+    {
+        return _pixelHeight;
+    }
+    void setPixelSize( const int &w, const int &h)
+    {
+        _pixelWidth = w;
+        _pixelHeight = h;
+    }
+
+protected:
+    double _left;
+    double _right;
+    double _top;
+    double _bottom;
+    int _pixelWidth;
+    int _pixelHeight;
 };
 
 #endif // TAGIMAGEFILE_H

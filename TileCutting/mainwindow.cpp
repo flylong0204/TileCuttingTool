@@ -59,7 +59,14 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-
+    if(ui->SavePathShow->text().isEmpty() || ui->FilePathshow->text().isEmpty())
+        return;
+    if(ui->txtMinLevel->text().toInt() >= ui->txtMaxLevel->text().toInt())
+        return;
+    if(ui->Left->text().isEmpty() || ui->Right->text().isEmpty() || ui->Top->text().isEmpty() || ui->Bottom->text().isEmpty())
+        return;
+    if(ui->Left->text().toDouble() >= ui->Right->text().toDouble() || ui->Bottom->text().toDouble() >= ui->Top->text().toDouble() )
+        return;
 }
 
 void MainWindow::on_close_clicked()
