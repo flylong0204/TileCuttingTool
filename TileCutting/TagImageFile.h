@@ -63,6 +63,8 @@ protected:
     int _pixelWidth;
     int _pixelHeight;
 
+    osg::ref_ptr<osg::Image> _image;
+
     void getInfo();
 };
 
