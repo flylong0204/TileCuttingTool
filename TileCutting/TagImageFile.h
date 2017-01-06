@@ -17,9 +17,12 @@ class TagImageFileBasic
 public:
     TagImageFileBasic();
     TagImageFileBasic( const QString &filePath, const TigImageFileType &type );
+    ~TagImageFileBasic();
+
+    void setFilePath( const QString &filePath );
 
 private:
-    GDALDataset *_pdataset = NULL;
+    GDALDataset *_dataset = NULL;
     QString _filePath;
     TigImageFileType _type;
     double _left;
