@@ -4,8 +4,7 @@
 #include <QMainWindow>
 #include <QDebug>
 
-#include "TileCuttCore.h"
-#include "TileCuttInfo.h"
+#include "TagImageFile.h"
 
 namespace Ui {
 class MainWindow;
@@ -31,7 +30,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    TileCuttCore _tileCuttCore;
+    TagImageFileBasic _tile;
 
 };
 

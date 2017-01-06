@@ -28,14 +28,16 @@ void MainWindow::on_OpenFile_clicked()
     else
     {
         ui->FilePathshow->setText( filename );
-        _tileCuttCore.setSource(filename);
-        ui->Left->setText( QString::number( _tileCuttCore.getInfo().getLeft()) );
-        ui->Right->setText( QString::number( _tileCuttCore.getInfo().getRight()) );
-        ui->Top->setText( QString::number( _tileCuttCore.getInfo().getTop()) );
-        ui->Bottom->setText( QString::number( _tileCuttCore.getInfo().getBottom()) );
-        ui->txtMinLevel->setText( QString::number( _tileCuttCore.getInfo().getMinLayer()));
-        ui->txtMaxLevel->setText( QString::number( _tileCuttCore.getInfo().getMaxLayer()));
-        ui->band->setText( QString::number( _tileCuttCore.getBand()));
+        _tile.setFilePath(filename);
+        ui->Left->setText( QString::number( _tile.getLeft()) );
+        ui->Right->setText( QString::number( _tile.getRight()) );
+        ui->Top->setText( QString::number( _tile.getTop()) );
+        ui->Bottom->setText( QString::number( _tile.getBottom()) );
+        ui->txtMinLevel->setText( QString::number( _tile.getMinLayer()));
+        ui->txtMaxLevel->setText( QString::number( _tile.getMaxLayer()));
+        ui->band->setText( QString::number( _tile.getBand()));
+        ui->pixelW->setText( QString::number( _tile.getPixelWidth() ));
+        ui->pixelH->setText( QString::number( _tile.getPixelHeight() ));
     }
 }
 
@@ -57,7 +59,7 @@ void MainWindow::on_SaveFile_clicked()
 
 void MainWindow::on_structure_clicked()
 {
-    qDebug() << (TileCuttInfo(1.111100001111,2,3,4,0,1) == TileCuttInfo(1.111100001111,2,3,4,0,1));
+
 }
 
 void MainWindow::on_close_clicked()

@@ -6,13 +6,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    TileCuttInfo.cpp \
-    TileCuttCore.cpp \
     TagImageFile.cpp
 
 HEADERS  += mainwindow.h \
-    TileCuttInfo.h \
-    TileCuttCore.h \
     TagImageFile.h
 
 FORMS    += mainwindow.ui

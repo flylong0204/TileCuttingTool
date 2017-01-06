@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>359</width>
-    <height>487</height>
+    <width>454</width>
+    <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>20</y>
-      <width>336</width>
-      <height>447</height>
+      <width>431</width>
+      <height>455</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -225,7 +225,7 @@
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_8">
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;瓦片金字塔层次：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;金字塔层次：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
@@ -243,6 +243,16 @@
                     <item>
                      <widget class="QLineEdit" name="txtMinLevel"/>
                     </item>
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="text">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;像素宽：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="pixelW"/>
+                    </item>
                    </layout>
                   </item>
                   <item>
@@ -256,6 +266,16 @@
                     </item>
                     <item>
                      <widget class="QLineEdit" name="txtMaxLevel"/>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="label_14">
+                      <property name="text">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;像素高：&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="pixelH"/>
                     </item>
                    </layout>
                   </item>
